@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <!---HTTPS redirect
+    <script>
+        if (window.location.protocol!= "https:")
+                    window.location.href ="https:"+window.location.href.substring(window.location.protocol.length);
+    </script>
+    --->
+
+
+    <script>
+        $(document).ready(function() {
+            // mobile menu toggle
+            var clicked = false;
+            /* addition of mobile menu*/
+            if (window.innerWidth< 780){
+                $('.navigation').css('display','none');
+                $('.icon').css({'display':'inline-block'});
+                $('.list').css('position', 'relative');
+                $('.list li').css({'float':'none'},{'display':'inline'});
+                $('.list li a').css('display', 'block');
+            }
+            $('.icon').click(function(){
+                if (!clicked){
+                    $('#mobileMenu').css('display', 'inline-block');
+                }
+                else{
+                    $('#mobileMenu').css('display', 'none');
+                }
+                clicked = !clicked;
+            });
+        } );
+    </script>
+    <script>
+        $(window).resize(function() {
+            /* addition of mobile menu*/
+            if (window.innerWidth< 780){
+                $('.navigation').css('display','none');
+                $('.icon').css({'display':'inline-block'});
+                $('.list').css('position', 'relative');
+                $('.list li').css({'float':'none'},{'display':'inline'});
+                $('.list li a').css('display', 'block');
+            }
+            else{
+                $('.navigation').css('display','inline-block');
+                $('.icon').css({'display':'none'});
+                $('.list li').css({'float':'none'},{'display':'none'});
+                $('.list li a').css('display', 'none');
+                $('#mobileMenu').css('display', 'none');
+            }
+        });
+    </script>
+    <title>Su Hong Koo - About</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <div id="header">
+        <script>
+            /* new color */
+            $(document).ready(function(){
+                $(".mobileNav").hover(function(){
+                            $(this).css('background-color','#FF4500');
+                        },
+                        function(){
+                            $(this).css('background-color','#FF5722');
+                        }
+                );
+            });
+            /*
+             old color
+
+             $(document).ready(function(){
+             $(".mobileNav").hover(function(){
+             $(this).css('background-color','#FF4500');
+             },
+             function(){
+             $(this).css('background-color','#FF5722');
+             }
+             );
+             });
+             */
+        </script>
+        <ul id="list">
+            <li id="home">
+                <a href="test.html"><table>
+                    <tr>Su Hong Koo</tr>
+                    <tr><p id="sub">Dank Memes and Broken Dreams</p></tr>
+                </table></a>
+            </li>
+
+            <li class="icon">
+                <!--- <a href="javascript:void(0);" onclick="collapsableMenu()"></a>
+                --->
+            </li>
+            <li class="navigation"><a  href="Contact.html"> Contacts</a></li>
+            <li class="navigation"><a href="Project.html"> Projects</a></li>
+            <li class = "navigation"><a href="About.html">About</a></li>
+
+
+        </ul>
+    </div>
+    <div >
+        <script>
+            $(document).ready(function(){
+                $(".mobileNav").hover(function(){
+                            $(this).css('background-color','#FF4500');
+                        },
+                        function(){
+                            $(this).css('background-color','#FF5722');
+                        }
+                );
+            });
+        </script>
+        <ul id ="mobileMenu">
+            <li class ="mobileNav" ><a href="About.html">About</a></li>
+            <li class="mobileNav"><a href="Project.html"> Projects</a></li>
+            <li class= "mobileNav"><a href="Contact.html"> Contacts</a></li>
+        </ul>
+    </div>
+        <script>
+            var imgIndex =0;
+            var images = ["ots.jpg", "11111.jpg", "22222.png", "33333.png", "lmao.jpg"];
+            $(document).ready(function(){
+                $('#left').click(function(){
+                    if(imgIndex===0)
+                            imgIndex=images.length-1;
+                    else
+                            imgIndex-=1;
+                    $('.imgHeader').css( "background-image", "url("+images[imgIndex]+")");
+                });
+                $("#right").click(function(){
+                    if(imgIndex===images.length-1)
+                        imgIndex=0;
+                    else
+                        imgIndex+=1;
+                    $('.imgHeader').css( "background-image", "url("+images[imgIndex]+")");
+                });
+            });
+        </script>
+        <div class ='imgHeader'>
+            <div id ="leftRight">
+                <div id="left" style="cursor:pointer"><img class="navButton" src="arrow.png"></div>
+                <div id="right" style="cursor:pointer"><img class = "navButton" src="arrow2.png"></div>
+            </div>
+
+        </div>
+        <div id ='aboutContent'>
+            <h3>About Me</h3>
+            <p> Hello folks. This is where I am supposed to introduce myself and whatnot. But the chances are, if you got here before February of '17, you damn well know who I am. So I'm not going to bother writing any cheesy and narcissistic lines until then. And please don't make fun of my site,
+            I know it looks bad but what did you expect from someone who is completely devoid of artistic talent?</p>
+        </div>
+
+        <div id="footer">
+            <p style="margin:0;">Copyright &copy Su Hong Koo 2016.</p>
+        </div>
+</div>
+</body>
+</html>

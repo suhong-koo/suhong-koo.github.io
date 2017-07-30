@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+        var mobileMenuToggle = function(){
+            $(window).resize(function() {
+                /* addition of mobile menu*/
+                if (window.innerWidth< 780){
+                    $('.navigation').css('display','none');
+                    $('.icon').css({'display':'inline-block'});
+                    $('.list').css('position', 'relative');
+                    $('.list li').css({'float':'none'},{'display':'inline'});
+                    $('.list li a').css('display', 'block');
+                }
+                else{
+                    $('.navigation').css('display','inline-block');
+                    $('.icon').css({'display':'none'});
+                    $('.list li').css({'float':'none'},{'display':'none'});
+                    $('.list li a').css('display', 'none');
+                    $('#mobileMenu').css('display', 'none');
+                }
+            });
+        }
+        $(document).ready(function() {
+            // mobile menu toggle
+            var clicked = false;
+            /* addition of mobile menu*/
+            mobileMenuToggle();
+            $('.icon').click(function(){
+                if (!clicked){
+                    $('#mobileMenu').css('display', 'inline-block');
+                }
+                else{
+                    $('#mobileMenu').css('display', 'none');
+                }
+                clicked = !clicked;
+            });
+            $(".navigation").hover(function(){
+                        /* new Greenish Color*/
+                        $(this).css('background-color','#FF5722');
+                    },
+                    function(){
+                        $(this).css('background-color','#00796B');
+                    }
+                    /* original Orange color
+                     function(){
+                     $(this).css('background-color','#FF4500');
+                     },
+                     function(){
+                     $(this).css('background-color','#FF5722');
+                     }
+                     */
+            );
+            $(".mobileNav").hover(function(){
+                        $(this).css('background-color','#FF4500');
+                    },
+                    function(){
+                        $(this).css('background-color','#00796B');
+                    }
+                    /* original Orange color
+                     function(){
+                     $(this).css('background-color','#FF4500');
+                     },
+                     function(){
+                     $(this).css('background-color','#FF5722');
+                     }
+                     */
+            );
+        } );
+        $(window).resize(function() {
+            mobileMenuToggle();
+        });
+    </script>
+    <title>Su Hong Koo - Contacts</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <div id="header">
+
+        <ul id="list">
+            <li id="home">
+                <a href="main.html"><table>
+                    <tr>Su Hong Koo</tr>
+                    <tr><p id="sub">1B Computer Engineering/p></tr>
+                </table></a>
+            </li>
+
+            <li class="icon">
+                <!--- <a href="javascript:void(0);" onclick="collapsableMenu()"></a>
+                --->
+            </li>
+            <li class = "navigation"><a href="https://drive.google.com/file/d/0Bz1VS4yhMSUNTXlMY1J0VFRBN0k/view?usp=sharing">Résumé</a></li>
+            <li class="navigation"><a  href="Contact.html"> Contacts</a></li>
+            <li class="navigation"><a href="Project.html"> Projects</a></li>
+            <li class = "navigation"><a href="About.html">About</a></li>
+
+
+        </ul>
+    </div>
+    <div >
+
+        <ul id ="mobileMenu">
+            <li class ="mobileNav" ><a href="About.html">About</a></li>
+            <li class="mobileNav"><a href="Project.html"> Projects</a></li>
+            <li class= "mobileNav"><a href="Contact.html"> Contacts</a></li>
+            <li class= "mobileNav"><a href="https://drive.google.com/file/d/0Bz1VS4yhMSUNTXlMY1J0VFRBN0k/view?usp=sharing"> Résumé</a></li>
+        </ul>
+    </div>
+    <div id = "contentHeader">
+        <p id = "contentTitle">Contacts</p>
+    </div>
+        <div id="bod">
+            <script>
+                var resizeContent=function(){
+                    var a = window.innerWidth;
+                    if(a<1000){
+                        $('.aa').width(a);
+                    }
+                };
+                var resizeBig=function(){
+                    var a =window.innerWidth;
+                    if (a>=1000){
+                        $('.aa').width(1000);
+                    }
+                };
+
+                $(document).ready(function() {
+                    resizeContent();
+                });
+                $(window).resize(function() {
+                    resizeContent();
+                    resizeBig();
+                });
+
+            </script>
+            <h3 class="aa"> Interested in learning more?</h3>
+            <p class ="aa" style="margin-left:25px;"> You can reach me via email: <a style="color:blue; text-decoration: underline;" href="mailto:contacts@suhongkoo.com" target="_top">contacts@suhongkoo.com</a> or
+                <a style="color:blue; text-decoration: underline;" href="mailto:sh2koo@edu.uwaterloo.ca" target="_top">sh2koo@edu.uwaterloo.ca(if you need my school email) </a></p>
+            <div>
+                <div class="contactBlocks" style="float:left;">
+                    <p> You can also find me on Github:</p>
+                    <!-- Place this tag where you want the button to render. -->
+                    <iframe style="float:left; display:block;" src="http://githubbadge.appspot.com/suhong-koo" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+                </div>
+                <div class="contactBlocks">
+                    <p>And check me out on LinkedIn:</p>
+                    <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="suhongkoo"><a class="LI-simple-link" href='https://ca.linkedin.com/in/suhongkoo?trk=profile-badge'>Su Hong Koo</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p style="margin:0;">Copyright &copy Su Hong Koo 2016.</p>
+        </div>
+    </div>
+</body>
+</html>

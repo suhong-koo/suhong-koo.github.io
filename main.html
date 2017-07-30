@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            /* temporary, TAKE OUT AFTER MEMED*/
+            $('#introHead').hover(function(){
+                $('#contents').css('background-image', "url('comeCloserToTheLight.jpg')");
+            },
+            function(){
+                $('#contents').css('background-image', "url('mainPic.jpg')");
+            }
+            );
+            /* ======================================== */
+        });
+    </script>
+
+
+    <script>
+        var resumeURL = "https://google.com";
+    </script>
+
+
+    <script>
+        var mobileMenuToggle = function(){
+            $(window).resize(function() {
+                /* addition of mobile menu*/
+                if (window.innerWidth< 780){
+                    $('.navigation').css('display','none');
+                    $('.icon').css({'display':'inline-block'});
+                    $('.list').css('position', 'relative');
+                    $('.list li').css({'float':'none'},{'display':'inline'});
+                    $('.list li a').css('display', 'block');
+                }
+                else{
+                    $('.navigation').css('display','inline-block');
+                    $('.icon').css({'display':'none'});
+                    $('.list li').css({'float':'none'},{'display':'none'});
+                    $('.list li a').css('display', 'none');
+                    $('#mobileMenu').css('display', 'none');
+                }
+            });
+        }
+        $(document).ready(function() {
+            var clicked = false;
+            /* addition of mobile menu*/
+            mobileMenuToggle();
+            $('.icon').click(function(){
+                if (!clicked){
+                    $('#mobileMenu').css('display', 'inline-block');
+                }
+                else{
+                    $('#mobileMenu').css('display', 'none');
+                }
+                clicked = !clicked;
+            });
+            $(".navigation").hover(function(){
+                /* new Greenish Color*/
+                        $(this).css('background-color','#FF5722');
+                    },
+                    function(){
+                        $(this).css('background-color','#00796B');
+                    }
+                    /* original Orange color
+                     function(){
+                     $(this).css('background-color','#FF4500');
+                     },
+                     function(){
+                     $(this).css('background-color','#FF5722');
+                     }
+                     */
+            );
+            $(".mobileNav").hover(function(){
+                        $(this).css('background-color','#FF4500');
+                    },
+                    function(){
+                        $(this).css('background-color','#00796B');
+                    }
+                    /* original Orange color
+                     function(){
+                     $(this).css('background-color','#FF4500');
+                     },
+                     function(){
+                     $(this).css('background-color','#FF5722');
+                     }
+                     */
+            );
+        } );
+        $(window).resize(function() {
+           mobileMenuToggle();
+        });
+    </script>
+
+        <title>Su Hong Koo</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+
+            <ul id="list">
+                <li id="home">
+                    <a href="main.html"><table>
+                        <tr>Su Hong Koo</tr>
+                        <tr><p id="sub">With 78% less ORANGE</p></tr>
+                    </table></a>
+                </li>
+
+                <li class="icon">
+                   <!--- <a href="javascript:void(0);" onclick="collapsableMenu()"></a>
+                   --->
+                </li>
+                <li class = "navigation"><a href="https://drive.google.com/file/d/0Bz1VS4yhMSUNUUJvMjdfem5LWXM/view?usp=sharing">Résumé</a></li>
+                <li class="navigation"><a  href="Contact.html"> Contacts</a></li>
+                <li class="navigation"><a href="Project.html"> Projects</a></li>
+                <li class = "navigation"><a href="About.html">About</a></li>
+
+
+            </ul>
+        </div>
+        <div >
+
+            <ul id ="mobileMenu">
+                <li class ="mobileNav" ><a href="About.html">About</a></li>
+                <li class="mobileNav"><a href="Project.html"> Projects</a></li>
+                <li class= "mobileNav"><a href="Contact.html"> Contacts</a></li>
+                <li class= "mobileNav"><a href="https://drive.google.com/file/d/0Bz1VS4yhMSUNTXlMY1J0VFRBN0k/view?usp=sharing"> Résumé</a></li>
+            </ul>
+        </div>
+        <div id ="contents">
+
+
+                <div id="intro">
+                    <p id="introHead">Hello</p>
+                    <p id="introHead2">my name is</p>
+                    <h3>Suhong Koo</h3>
+                    <p class="introbody">Bonjour! Greetings! Salutations! </p>
+                    <p class="introbody">You made it! Somehow you made it all the way to suhongkoo.com. This is just a simple website that I put together myself when I was learning the basics of HTML/CSS.</p >
+                    <p class="introbody"> Since you are here, why don't you go have a look at some of my projects?</p >
+                    <p class="introbody"> Or have a peek at some quirky pictures I took on the E5 Brigde under the About section? </p >
+                    <p class="introbody"> Or gaze into my beautiful eyes. </p >
+                    <p class="introbody"> Or check out the latest version of my resume? </p >
+                </div>
+        </div>
+        <div id="footer">
+            <p style="margin:0;">Copyright &copy Su Hong Koo 2016.</p>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<head>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <!---HTTPS redirect
+    <script>
+        if (window.location.protocol!= "https:")
+                    window.location.href ="https:"+window.location.href.substring(window.location.protocol.length);
+    </script>
+    --->
+
+
+    <script>
+        $(document).ready(function() {
+            // mobile menu toggle
+            var clicked = false;
+            /* addition of mobile menu*/
+            if (window.innerWidth< 780){
+                $('.navigation').css('display','none');
+                $('.icon').css({'display':'inline-block'});
+                $('.list').css('position', 'relative');
+                $('.list li').css({'float':'none'},{'display':'inline'});
+                $('.list li a').css('display', 'block');
+            }
+            $('.icon').click(function(){
+                if (!clicked){
+                    $('#mobileMenu').css('display', 'inline-block');
+                }
+                else{
+                    $('#mobileMenu').css('display', 'none');
+                }
+                clicked = !clicked;
+            });
+        } );
+    </script>
+    <script>
+        $(window).resize(function() {
+            /* addition of mobile menu*/
+            if (window.innerWidth< 780){
+                $('.navigation').css('display','none');
+                $('.icon').css({'display':'inline-block'});
+                $('.list').css('position', 'relative');
+                $('.list li').css({'float':'none'},{'display':'inline'});
+                $('.list li a').css('display', 'block');
+            }
+            else{
+                $('.navigation').css('display','inline-block');
+                $('.icon').css({'display':'none'});
+                $('.list li').css({'float':'none'},{'display':'none'});
+                $('.list li a').css('display', 'none');
+                $('#mobileMenu').css('display', 'none');
+            }
+        });
+    </script>
+        <title>Su Hong Koo</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <script>
+                $(document).ready(function(){
+                    $(".navigation").hover(function(){
+                        $(this).css('background-color','#FF5722');
+                    },
+                    function(){
+                        $(this).css('background-color','#00796B');
+                    }
+                    );
+                });
+            </script>
+            <ul id="list">
+                <li id="home">
+                    <a href="test.html"><table>
+                        <tr>Su Hong Koo</tr>
+                        <tr><p id="sub">Dank Memes and Broken Dreams</p></tr>
+                    </table></a>
+                </li>
+
+                <li class="icon">
+                   <!--- <a href="javascript:void(0);" onclick="collapsableMenu()"></a>
+                   --->
+                </li>
+                <li class="navigation"><a  href="Contact.html"> Contacts</a></li>
+                <li class="navigation"><a href="Project.html"> Projects</a></li>
+                <li class = "navigation"><a href="About.html">About</a></li>
+
+
+            </ul>
+        </div>
+        <div >
+            <script>
+                /* new color */
+                $(document).ready(function(){
+                    $(".mobileNav").hover(function(){
+                                $(this).css('background-color','#FF4500');
+                            },
+                            function(){
+                                $(this).css('background-color','#00796B');
+                            }
+                    );
+                });
+                /*
+                old color
+                $(document).ready(function(){
+                    $(".mobileNav").hover(function(){
+                                $(this).css('background-color','#FF4500');
+                            },
+                            function(){
+                                $(this).css('background-color','#FF5722');
+                            }
+                    );
+                });
+                */
+            </script>
+            <ul id ="mobileMenu">
+                <li class ="mobileNav" ><a href="About.html">About</a></li>
+                <li class="mobileNav"><a href="Project.html"> Projects</a></li>
+                <li class= "mobileNav"><a href="Contact.html"> Contacts</a></li>
+            </ul>
+        </div>
+        <div id ="contents">
+
+
+                <div id="intro">
+                    <p id="introHead">Hello</p>
+                    <p id="introHead2">my name is</p>
+                    <h3>Suhong Koo</h3>
+                    <p class="introbody"> TO DOs: (1) Resize everything </p>
+                    <p class="introbody"> TO DOs: (2) dump all scripts into a seperate .js file </p >
+                    <p class="introbody"> TO DOs: (3) GET IMAGES HOLY SHIT WHAT ARE THOSE </p >
+                    <p class="introbody"> TO DOs: (4) Create contents </p >
+                </div>
+        </div>
+        <div id="footer">
+            <p style="margin:0;">Copyright &copy Su Hong Koo 2016.</p>
+        </div>
+    </div>
+</body>

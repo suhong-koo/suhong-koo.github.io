@@ -1,0 +1,293 @@
+/*
+ALT for #FF5722
+#FF4500
+*/
+/* alt bg color #7e7e7e*/
+body{
+    margin:0px;
+    background-color: white;
+
+
+}
+#header{
+    display:block;
+    z-index:2;
+    /* background-color:#FF5722;
+    Original Orange
+    */
+    background-color:#00796B;
+    width:100%;
+    height: 100px;
+    margin-top:0px;
+    overflow:hidden;
+    font-weight:bold;
+    color:white;
+    font-size:30px;
+    font-family:  Arial;
+    list-style: none;
+
+}
+.wrapper{
+    min-height:100vh;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    background-color:#f6f6f6;
+
+}
+#contents{
+   /* background-image: url("GJ-bu 6.jpg");
+   */
+    background-image: url("mainPic.jpg");
+    background-size:100% 100%;
+    width:100%;
+    height: 1000px;
+
+}
+
+.body{
+    background-image: url("GJ-bu 6.jpg");
+    background-size:100% 100%;
+    width:100%;
+    height: 1000px;
+}
+#footer{
+    width:100%;
+    height:25px;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight:bold;
+    color:white;
+    /* background-color:#FF5722;
+    Original Orange
+    */
+    background-color:#00796B;
+    padding-top:10px;
+    position:absolute;
+    bottom:0px;
+
+}
+#home{
+    display:inline-block;
+    padding-left:50px;
+    padding-top:20px;
+}
+
+.navigation{
+    display:inline-block;
+    float:right;
+    text-align:center;
+    padding:30px 20px 35px 20px ;
+}
+#list{
+    margin:0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height:100px;
+
+}
+#sub{
+
+    font-family:  sans-serif;
+    font-size:12px;
+    color:white;
+    text-align:center;
+    margin-top: 4px;
+
+}
+#intro{
+    width: 480px;
+    min-height: 500px;
+    /* background-color:#FF5722;
+    Original Orange
+    */
+    background-color:#00796B;
+    margin-top:150px;
+    float:right;
+    margin-right:150px;
+    border-radius: 10px;
+
+}
+#banner{
+    width:100%;
+    background-image:url("http://image.shutterstock.com/z/stock-photo-funny-portrait-of-curious-man-looking-over-white-wall-or-sign-isolated-over-white-54782923.jpg");
+    height:400px;
+    background-size: cover;
+}
+h3{
+    font-family: sans-serif;
+    text-align: center;
+    font-weight:bold;
+    color:white;
+    font-size: 40px;
+    display:block;
+    background-color:#f6f6f6;
+}
+
+.introbody{
+    font-family: sans-serif;
+    color:white;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right:20px;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+.section{
+    width: 60%;
+    height: 65%;
+    background-color: #FF5722;
+    border-radius: 10px;
+    margin-bottom:20px;
+    margin-left:190px;
+    margin-right:190px;
+}
+.icon{
+    background-image:url('trigram.png');
+    background-size:cover;
+    height:80px;
+    width:80px;
+    float:right;
+    text-align:center;
+    display:none;
+}
+.mobileNav{
+    text-align: right;
+    display: block;
+    font-size:2em;
+    margin-right:10px;
+    width:100%;
+}
+#mobileMenu{
+    display:none;
+    /* background-color:#FF5722;
+    Original Orange
+    */
+    background-color:#00796B;
+    font-family:sans-serif;
+    font-weight:bold;
+    margin-top:0px;
+    width:100%;
+    padding:0px 40px 0px 0px;
+    margin-bottom:0px;
+}
+
+.imgHeader{
+    width:100%;
+    height: 700px;
+    background-image: url('comeCloserToTheLight.jpg');
+    background-size:100% 100%;
+    transition: background 0.5s linear;
+}
+#aboutContent{
+    width: 1000px;
+    height:700px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+h3{
+    color:#FF5722;
+    font-family:sans-serif;
+    font-weight:bold;
+    margin: 10px 0px 10px 0px;
+    padding: 15px 0px 15px 0px;
+}
+p{
+    font-family:sans-serif;
+
+}
+#bod{
+    min-height:100%;
+    width:1000px;
+    margin-left:auto;
+    margin-right: auto;
+    background-color:#f6f6f6;
+}
+#leftRight{
+    z-index:2;
+    display:inline-block;
+    width:100%;
+    margin-top:300px;
+}
+#left{
+    margin-left:30px;
+    float:left;
+}
+#right{
+    float:right;
+    margin-right:30px;
+}
+.navButton{
+    width:50px;
+    height:50px;
+}
+body{
+    height:100%;
+}
+#introHead{
+    font-family:sans-serif;
+    font-weight:bold;
+    color:white;
+    font-size: 48px;
+    margin: 10px 0px 0px 0px;
+    text-align:center;
+}
+
+#introHead2{
+    font-family:sans-serif;
+    font-weight:bold;
+    color:white;
+    font-size: 28px;
+    margin: 0px 0px 10px 0px;
+    text-align:center;
+}
+#contentHeader{
+    background-color:#7e7e7e;
+    width: 100%;
+    height: 400px;
+}
+#contentTitle{
+    color:white;
+    font-family:sans-serif;
+    font-size: 60px;
+    margin: 0px 0px 0px 0px;
+    padding-top:100px;
+    font-weight:bold;
+    text-align:center;
+}
+.projectContent{
+    min-height:300px;
+    margin: 30px auto 0px auto;
+    display:block;
+    border-bottom-style:solid;
+    border-bottom-color:#7e7e7e;
+}
+.projectText{
+    display:inline-block;
+    width:600px;
+    margin: auto auto auto 10px;
+    float: left;
+}
+.projectPicture{
+    display:inline-block;
+    width:350px;
+    margin: auto auto auto auto;
+}
+.projectPicture img{
+    display:block;
+    width:300px;
+    height:200px;
+    margin: 20px auto auto auto;
+}
+.projectTitle{
+    color:#FF5722;
+    font-family:sans-serif;
+    font-weight:bold;
+    font-size:20px;
+}
+.contactBlocks{
+    display:block;
+    margin-left:25px;
+}
