@@ -6,95 +6,31 @@
 
     <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-
-    <script>
-        $(document).ready(function(){
-            /* temporary, TAKE OUT AFTER MEMED*/
-            $('#introHead').hover(function(){
-                $('#contents').css('background-image', "url('comeCloserToTheLight.jpg')");
-            },
-            function(){
-                $('#contents').css('background-image', "url('mainPic.jpg')");
-            }
-            );
-            /* ======================================== */
-        });
-    </script>
-
-
     <script>
         var resumeURL = "https://google.com";
     </script>
 
 
     <script>
-        var mobileMenuToggle = function(){
-            $(window).resize(function() {
-                /* addition of mobile menu*/
-                if (window.innerWidth< 780){
-                    $('.navigation').css('display','none');
-                    $('.icon').css({'display':'inline-block'});
-                    $('.list').css('position', 'relative');
-                    $('.list li').css({'float':'none'},{'display':'inline'});
-                    $('.list li a').css('display', 'block');
-                }
-                else{
-                    $('.navigation').css('display','inline-block');
-                    $('.icon').css({'display':'none'});
-                    $('.list li').css({'float':'none'},{'display':'none'});
-                    $('.list li a').css('display', 'none');
-                    $('#mobileMenu').css('display', 'none');
-                }
-            });
-        }
+        // TODO: Turn this into js only
+        // TODO: add slideshow of images
         $(document).ready(function() {
-            var clicked = false;
-            /* addition of mobile menu*/
-            mobileMenuToggle();
-            $('.icon').click(function(){
-                if (!clicked){
-                    $('#mobileMenu').css('display', 'inline-block');
+            if (document.location.hash == "" || document.location.hash == "#"){
+                document.location.hash = "#main";
+            }
+            const generateRandomWord = (arr) =>
+            {
+                return arr[Math.round(Math.random()* (arr.length-1))];
+            }
+            $.getJSON("./res/positiveAttr.json", function(data){
+                // randomly generate 3 words
+                const wordList = data.PositiveAttributes;
+                var positiveWords = [];
+                for (let i = 0; i < 3; i++){
+                    positiveWords.push(generateRandomWord(wordList[Math.round(Math.random()* (wordList.length-1))]));
                 }
-                else{
-                    $('#mobileMenu').css('display', 'none');
-                }
-                clicked = !clicked;
+                $('#adjectives').text(`${positiveWords[0]}, ${positiveWords[1]}, ${positiveWords[2]}`);
             });
-            $(".navigation").hover(function(){
-                /* new Greenish Color*/
-                        $(this).css('background-color','#FF5722');
-                    },
-                    function(){
-                        $(this).css('background-color','#00796B');
-                    }
-                    /* original Orange color
-                     function(){
-                     $(this).css('background-color','#FF4500');
-                     },
-                     function(){
-                     $(this).css('background-color','#FF5722');
-                     }
-                     */
-            );
-            $(".mobileNav").hover(function(){
-                        $(this).css('background-color','#FF4500');
-                    },
-                    function(){
-                        $(this).css('background-color','#00796B');
-                    }
-                    /* original Orange color
-                     function(){
-                     $(this).css('background-color','#FF4500');
-                     },
-                     function(){
-                     $(this).css('background-color','#FF5722');
-                     }
-                     */
-            );
-        } );
-        $(window).resize(function() {
-           mobileMenuToggle();
         });
     </script>
 
@@ -102,55 +38,92 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div id="header">
-
-            <ul id="list">
-                <li id="home">
-                    <a href="main.html"><table>
-                        <tr>Su Hong Koo</tr>
-                        <tr><p id="sub">With 78% less ORANGE</p></tr>
-                    </table></a>
-                </li>
-
-                <li class="icon">
-                   <!--- <a href="javascript:void(0);" onclick="collapsableMenu()"></a>
-                   --->
-                </li>
-                <li class = "navigation"><a href="https://drive.google.com/file/d/0Bz1VS4yhMSUNUUJvMjdfem5LWXM/view?usp=sharing">Résumé</a></li>
-                <li class="navigation"><a  href="Contact.html"> Contacts</a></li>
-                <li class="navigation"><a href="Project.html"> Projects</a></li>
-                <li class = "navigation"><a href="About.html">About</a></li>
-
-
-            </ul>
-        </div>
-        <div >
-
-            <ul id ="mobileMenu">
-                <li class ="mobileNav" ><a href="About.html">About</a></li>
-                <li class="mobileNav"><a href="Project.html"> Projects</a></li>
-                <li class= "mobileNav"><a href="Contact.html"> Contacts</a></li>
-                <li class= "mobileNav"><a href="https://drive.google.com/file/d/0Bz1VS4yhMSUNTXlMY1J0VFRBN0k/view?usp=sharing"> Résumé</a></li>
-            </ul>
-        </div>
-        <div id ="contents">
-
-
-                <div id="intro">
-                    <p id="introHead">Hello</p>
-                    <p id="introHead2">my name is</p>
-                    <h3>Suhong Koo</h3>
-                    <p class="introbody">Bonjour! Greetings! Salutations! </p>
-                    <p class="introbody">You made it! Somehow you made it all the way to suhongkoo.com. This is just a simple website that I put together myself when I was learning the basics of HTML/CSS.</p >
-                    <p class="introbody"> Since you are here, why don't you go have a look at some of my projects?</p >
-                    <p class="introbody"> Or have a peek at some quirky pictures I took on the E5 Brigde under the About section? </p >
-                    <p class="introbody"> Or gaze into my beautiful eyes. </p >
-                    <p class="introbody"> Or check out the latest version of my resume? </p >
+    <div class="mainBackground" >
+        <div class="mainWrapper">
+            <div class="header">
+                <div class="nameWrapper">
+                    <div class="name">Su Hong Koo</div>
                 </div>
+                <div class="rightHeaderWrapper">
+                    <div class="iconWrapper">
+                        <a href="https://github.com/suhong-koo"> <div class="headerIcon" id="githubIcon"></div></a>
+                        <a href="https://www.linkedin.com/in/suhongkoo/?ppe=1"> <div class="headerIcon" id="linkedInIcon"></div></a>
+                        <a href="mailto:contacts@suhongkoo.com" target="_top"><div class="headerIcon" id="emailIcon"></div></a>
+                    </div>
+                    <div class="resumeWrapper">
+                        <div><a class="resume" href=https://drive.google.com/file/d/0Bz1VS4yhMSUNUUJvMjdfem5LWXM/view?usp=sharing">Résumé</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pageContent">
+                <!--Main-->
+                <div class="mainContent" id="main">
+                    <div class="titleWrapper">
+                        <div class="title">Hello! My name is Su Hong</div>
+                    </div>
+                    <div class="detailContent">
+                        <div>Three well thought out, totally not generic nor randomly generated words that describe me perfectly are: </div>
+                        <span id="adjectives" />
+                    </div>
+                    <div class="navigation">
+                        <div><a class="navLink" href="#about">About</a></div>
+                        <div><a class="navLink" href="#projects">Projects</a></div>
+                        <div><a class="navLink" href="#contact">Contact</a></div>
+                    </div>
+                </div>
+
+                <!--About-->
+                <div class="mainContent" id="about">
+                    <div class="titleWrapper">
+                        <div class="title">About Me...</div>
+                    </div>
+                    <div class="detailContent">
+                        I am a 2A Computer Engineering student attending University of Waterloo. My interests are anything that can be semi-accurately represented with 0s and 1s!
+                    </div>
+                    <div class="navigation">
+                        <div><a class="navLink" href="#main">Home</a></div>
+                        <div><a class="navLink" href="#projects">Projects</a></div>
+                        <div><a class="navLink" href="#contact">Contact</a></div>
+                    </div>
+                </div>
+
+                <!--Projects-->
+                <div class="mainContent" id="projects">
+                    <div class="titleWrapper">
+                        <div class="title">My Projects</div>
+                    </div>
+                    <div class="detailContent">
+                        TODO: Add something to this page again...
+                    </div>
+                    <div class="navigation">
+                        <div><a class="navLink" href="#main">Home</a></div>
+                        <div><a class="navLink" href="#about">About</a></div>
+                        <div><a class="navLink" href="#contact">Contact</a></div>
+                    </div>
+                </div>
+
+                <!--Contact-->
+                <div class="mainContent" id="contact">
+                    <div class="titleWrapper">
+                        <div class="title">Contact Me</div>
+                    </div>
+                    <div class="detailContent">
+                        <div class="emailText">
+                            <p style="margin-left:25px;"> You can reach me via email: <a style="color:skyblue; text-decoration: underline;" href="mailto:contacts@suhongkoo.com" target="_top">contacts@suhongkoo.com</a></p>
+                            <p style="margin-left:25px;"> or at: <a style="color:skyblue; text-decoration: underline;" href="mailto:sh2koo@edu.uwaterloo.ca" target="_top">sh2koo@edu.uwaterloo.ca</a></p>
+                        </div>
+                        There is a link to my GitHub and LinkedIn on the top right hand side
+                    </div>
+                    <div class="navigation">
+                        <div><a class="navLink" href="#main">Home</a></div>
+                        <div><a class="navLink" href="#about">About</a></div>
+                        <div><a class="navLink" href="#projects">Projects</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">Copyright © Su Hong Koo 2017.</div>
         </div>
-        <div id="footer">
-            <p style="margin:0;">Copyright &copy Su Hong Koo 2016.</p>
-        </div>
+        <div class="tintProvider"/>
+
     </div>
 </body>

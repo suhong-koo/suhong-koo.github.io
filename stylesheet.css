@@ -1,293 +1,221 @@
-/*
-ALT for #FF5722
-#FF4500
-*/
-/* alt bg color #7e7e7e*/
-body{
-    margin:0px;
-    background-color: white;
-
+.mainBackground{
+    min-width: 100%;
+    min-height: 100vh;
+    background: url('./images/mainPic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
 
 }
-#header{
-    display:block;
-    z-index:2;
-    /* background-color:#FF5722;
-    Original Orange
-    */
-    background-color:#00796B;
-    width:100%;
-    height: 100px;
-    margin-top:0px;
-    overflow:hidden;
-    font-weight:bold;
-    color:white;
-    font-size:30px;
-    font-family:  Arial;
-    list-style: none;
-
-}
-.wrapper{
-    min-height:100vh;
-    height:100%;
-    overflow:hidden;
-    position: relative;
-    background-color:#f6f6f6;
-
-}
-#contents{
-   /* background-image: url("GJ-bu 6.jpg");
-   */
-    background-image: url("mainPic.jpg");
-    background-size:100% 100%;
-    width:100%;
-    height: 1000px;
-
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
 }
 
-.body{
-    background-image: url("GJ-bu 6.jpg");
-    background-size:100% 100%;
-    width:100%;
-    height: 1000px;
+.header{
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    z-index: 3;
+    margin-top: 64px;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: bold;
 }
-#footer{
-    width:100%;
-    height:25px;
-    font-family: sans-serif;
-    text-align: center;
-    font-weight:bold;
-    color:white;
-    /* background-color:#FF5722;
-    Original Orange
-    */
-    background-color:#00796B;
-    padding-top:10px;
-    position:absolute;
-    bottom:0px;
 
+/* TODO: consolidate nameWrapper and resumeWrapper */
+.nameWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
+    margin-left: 8%;
+    padding: 0 10px;
 }
-#home{
-    display:inline-block;
-    padding-left:50px;
-    padding-top:20px;
+
+.resumeWrapper{
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/* TODO: make the tint go behind the text (so the text remains white) */
+.header > .nameWrapper:hover{
+    background: #000000;
+    opacity: .4;
+    z-index: 2;
+}
+.header > .rightHeaderWrapper > .resumeWrapper:hover{
+    background: #000000;
+    opacity: .4;
+    z-index: 2;
+}
+
+.resume{
+    height: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+
+#githubIcon{
+    background: url('./images/logos/githubIcon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+#linkedInIcon{
+    background: url('./images/logos/linkedinIcon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#emailIcon{
+    background: url('./images/logos/emailIcon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+.iconWrapper{
+    width: 124px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: space-around;
+}
+.rightHeaderWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5%;
+}
+.headerIcon{
+    width: 24px;
+    height: 24px;
+    z-index: 3;
+}
+
+.pageContent{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* TODO: Find out why margin-right doesn't work */
+.mainContent{
+    width: 20%;
+    min-width: 360px;
+    height: 40%;
+    min-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: -150%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    z-index: 2;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #FFF;
+}
+
+.mainContent:target{
+    margin-left: 20%;
+}
+
+.titleWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.title{
+    font-size: 24px;
+}
+.detailContent{
+    flex-grow: 1;
+    margin: 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#adjectives{
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 24px;
+}
+
+.main{
+    background: blue;
+}
+.about{
+    background: purple;
+}
+.projects{
+    background: yellow;
 }
 
 .navigation{
-    display:inline-block;
-    float:right;
-    text-align:center;
-    padding:30px 20px 35px 20px ;
-}
-#list{
-    margin:0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    height:100px;
-
-}
-#sub{
-
-    font-family:  sans-serif;
-    font-size:12px;
-    color:white;
-    text-align:center;
-    margin-top: 4px;
-
-}
-#intro{
-    width: 480px;
-    min-height: 500px;
-    /* background-color:#FF5722;
-    Original Orange
-    */
-    background-color:#00796B;
-    margin-top:150px;
-    float:right;
-    margin-right:150px;
-    border-radius: 10px;
-
-}
-#banner{
-    width:100%;
-    background-image:url("http://image.shutterstock.com/z/stock-photo-funny-portrait-of-curious-man-looking-over-white-wall-or-sign-isolated-over-white-54782923.jpg");
-    height:400px;
-    background-size: cover;
-}
-h3{
-    font-family: sans-serif;
-    text-align: center;
-    font-weight:bold;
-    color:white;
-    font-size: 40px;
-    display:block;
-    background-color:#f6f6f6;
-}
-
-.introbody{
-    font-family: sans-serif;
-    color:white;
-    font-size: 18px;
-    padding-left: 20px;
-    padding-right:20px;
-}
-a{
-    color:white;
-    text-decoration:none;
-}
-.section{
-    width: 60%;
-    height: 65%;
-    background-color: #FF5722;
-    border-radius: 10px;
-    margin-bottom:20px;
-    margin-left:190px;
-    margin-right:190px;
-}
-.icon{
-    background-image:url('trigram.png');
-    background-size:cover;
-    height:80px;
-    width:80px;
-    float:right;
-    text-align:center;
-    display:none;
-}
-.mobileNav{
-    text-align: right;
-    display: block;
-    font-size:2em;
-    margin-right:10px;
-    width:100%;
-}
-#mobileMenu{
-    display:none;
-    /* background-color:#FF5722;
-    Original Orange
-    */
-    background-color:#00796B;
-    font-family:sans-serif;
-    font-weight:bold;
-    margin-top:0px;
-    width:100%;
-    padding:0px 40px 0px 0px;
-    margin-bottom:0px;
-}
-
-.imgHeader{
-    width:100%;
-    height: 700px;
-    background-image: url('comeCloserToTheLight.jpg');
-    background-size:100% 100%;
-    transition: background 0.5s linear;
-}
-#aboutContent{
-    width: 1000px;
-    height:700px;
-    margin-left:auto;
-    margin-right:auto;
-
-}
-h3{
-    color:#FF5722;
-    font-family:sans-serif;
-    font-weight:bold;
-    margin: 10px 0px 10px 0px;
-    padding: 15px 0px 15px 0px;
-}
-p{
-    font-family:sans-serif;
-
-}
-#bod{
-    min-height:100%;
-    width:1000px;
-    margin-left:auto;
-    margin-right: auto;
-    background-color:#f6f6f6;
-}
-#leftRight{
-    z-index:2;
-    display:inline-block;
-    width:100%;
-    margin-top:300px;
-}
-#left{
-    margin-left:30px;
-    float:left;
-}
-#right{
-    float:right;
-    margin-right:30px;
-}
-.navButton{
-    width:50px;
-    height:50px;
-}
-body{
-    height:100%;
-}
-#introHead{
-    font-family:sans-serif;
-    font-weight:bold;
-    color:white;
-    font-size: 48px;
-    margin: 10px 0px 0px 0px;
-    text-align:center;
-}
-
-#introHead2{
-    font-family:sans-serif;
-    font-weight:bold;
-    color:white;
-    font-size: 28px;
-    margin: 0px 0px 10px 0px;
-    text-align:center;
-}
-#contentHeader{
-    background-color:#7e7e7e;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
     width: 100%;
-    height: 400px;
+    margin-bottom: 36px;
+    margin-top: 20px;
 }
-#contentTitle{
-    color:white;
-    font-family:sans-serif;
-    font-size: 60px;
-    margin: 0px 0px 0px 0px;
-    padding-top:100px;
-    font-weight:bold;
-    text-align:center;
+
+.navLink{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    opacity: 1;
 }
-.projectContent{
-    min-height:300px;
-    margin: 30px auto 0px auto;
-    display:block;
-    border-bottom-style:solid;
-    border-bottom-color:#7e7e7e;
+/* TODO: make the tint go behind the text (so the text remains white) AND make this work */
+.navigation > div > .navLink:hover{
+    background: #000;
+    opacity: .8;
+    z-index: 2;
 }
-.projectText{
-    display:inline-block;
-    width:600px;
-    margin: auto auto auto 10px;
-    float: left;
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    background: #000;
+    color: #FFF;
+    opacity: .7;
+    z-index: 3;
+    font-size: 12px;
 }
-.projectPicture{
-    display:inline-block;
-    width:350px;
-    margin: auto auto auto auto;
+
+html body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial;
+
 }
-.projectPicture img{
-    display:block;
-    width:300px;
-    height:200px;
-    margin: 20px auto auto auto;
-}
-.projectTitle{
-    color:#FF5722;
-    font-family:sans-serif;
-    font-weight:bold;
-    font-size:20px;
-}
-.contactBlocks{
-    display:block;
-    margin-left:25px;
+
+.tintProvider{
+    z-index: 1;
+    background-color: #000000;
+    opacity: .25;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
