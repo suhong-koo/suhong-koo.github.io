@@ -103,7 +103,7 @@
     width: 100%;
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -114,6 +114,9 @@
     min-height: 400px;
     overflow-y: auto;
     overflow-x: hidden;
+    /* firefox specific */
+    margin-right: 150%;
+    /* chrome specific */
     margin-left: -150%;
     position: absolute;
     display: flex;
@@ -129,7 +132,10 @@
 }
 
 .mainContent:target{
-    margin-left: 35%;
+    /* firefox specific */
+    margin-right: 10%;
+    /* chrome specific */
+    margin-left: -10%;
 }
 
 .titleWrapper{
