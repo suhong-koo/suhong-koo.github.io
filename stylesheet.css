@@ -3,6 +3,7 @@
     min-height: 100vh;
     background: url('./images/mainPic.jpg');
     background-size: cover;
+	background-position: center; 
     background-repeat: no-repeat;
     z-index: 1;
 
@@ -108,7 +109,7 @@
 
 .mainContent{
     width: 20%;
-    min-width: 360px;
+    min-width: 400px;
     height: 40%;
     min-height: 400px;
     overflow-y: auto;
